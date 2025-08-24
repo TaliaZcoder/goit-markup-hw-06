@@ -155,12 +155,12 @@ button {
 
 .title {
     font-weight: 700;
-    font-size: 56px;
-    line-height: 107%;
+    font-size: 36px;
+    line-height: 111%;
     letter-spacing: 0.02em;
     text-align: center;
     color: #fff;
-    max-width: 496px;
+    max-width: 216px;
     margin: 0 auto 48px;
 }
 
@@ -188,9 +188,15 @@ button {
     background-color: #404BBF;
 }
 
+ /* benefits */
+
 .title-benefits {
     line-height: 150%;
     letter-spacing: 0.02em;
+}
+
+.contenitore-icon {
+    display: none;
 }
 
 .section-benefits {
@@ -198,8 +204,9 @@ button {
     padding-bottom: 120px;
 }
 
-.benefits-container{
+.benefits-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -221,40 +228,67 @@ button {
     
 .list-benefits {
  display: flex;
- gap: 24px;
+ flex-direction: column;
+ gap: 72px;
+
 }
 
-.item-benefits {   
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 120%;
+.item-benefits {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
     letter-spacing: 0.02em;
     color: #2e2f42 ;
     margin-bottom: 8px;
 }
 
+ 
+
 .list-item-benefits {
-    width: calc((100% - 72px) / 4);
+    
 }
 
-.contenitore-icon {
+
+
+@media screen and (min-width: 1158px) {
+
+  .benefits-container{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
+}
+
+  .contenitore-icon {
+    display: flex;
+    align-items: center;
+    
     background-color: #f4f4fd;
     border: 1px solid #8e8f99;
     border-radius: 4px;
     width: 264px;
     height: 112px;
     margin-bottom: 8px;
-}
 
-@media screen and (max-width: 1157px) {
-  .contenitore-icon {
-    display: none;
+  }
+  
+  .list-benefits {
+    display: flex;
+    flex-direction: row;
+    gap: 24;
   }
 
-  
+  .list-item-benefits {
+    flex-basis: calc((100%-24)/3);
+
+  }
+
+  .item-benefits {  
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+}
 }
 
 
@@ -263,8 +297,12 @@ button {
 }
  
 .descr-benefits {
+    text-align: start;
+    font-weight: 500;
+    font-size: 1.5;
     line-height: 150%;
     letter-spacing: 0.02em;
+    min-width: 288px;
 }
 
 /* our team */
@@ -275,7 +313,9 @@ button {
 }
 
 .team-container {
+    width: 264px;
     margin: 0 auto;
+    padding: 0;
 }
 
 .title-team {
@@ -290,10 +330,12 @@ button {
 
 .lista-team {
     display: flex;
+    flex-direction: column;
     gap: 24px;
 }
 
 .descr-img-team {
+    min-width: 264px;
     padding: 32px 0;
     text-align: center;
 }
@@ -349,7 +391,7 @@ button {
 
  .item-team {
     background-color: #FFFFFF;
-    width: calc((100% - 72px) / 4);
+   
     border-radius: 0 0 4px 4px;
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 
                 0px 1px 1px rgba(46, 47, 66, 0.16), 
@@ -369,13 +411,11 @@ button {
 
 .list-portfolio {
     display: flex;
-    flex-wrap: wrap;
-    row-gap: 48px;
-    column-gap: 24px;
+    flex-direction: column;
+    gap: 48px;
 }
 
 .item-portfolio {
-    width: calc((100% - 48px) / 3);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -445,11 +485,12 @@ button {
  
 .all-footer-container {
     display: flex;
+    flex-direction: column;
     align-items: baseline;
 }
 
 .footer-container {
-    margin-right: 120px
+    margin: 0 auto;
 }
 
  .footer {
@@ -459,13 +500,19 @@ button {
 }
 
  .text-footer {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #f4f4fd;
     width: 264px;
+    margin-bottom: 72px;
  }
 
+
  .title-social {
+    text-align: center;
     color: #fff;
     margin-bottom: 16px;
     font-weight: 500;
@@ -476,7 +523,8 @@ button {
  }
 
  .logo-footer {
-    display: inline-block;
+    text-align: center;
+    display: block;
     margin-bottom: 16px;
  }
 
@@ -485,7 +533,8 @@ button {
   }
 
   .footer-container-social {
-    margin-right: 80px;
+    align-items: center;
+    margin: 0 auto 72px;
   }
 
  .nav-social-icon.footer-nsi:hover, 
@@ -493,7 +542,12 @@ button {
     background-color: #31d0aa;
  }
 
+.container-subscribe {
+    margin: 0 auto;
+}
+
  .title-subscribe {
+    text-align: center;
     margin-bottom: 16px;
     font-weight: 500;
     font-size: 16px;
@@ -504,7 +558,9 @@ button {
 
 .form-subscribe {
     display: flex; 
+    flex-direction: column;
     gap: 24px;
+    align-items: center;
 }
 
 .input-subscribe {
@@ -527,7 +583,7 @@ button {
 }
 
 .btn-subscribe {
-    min-width: 165px;
+    width: 165px;
     height: 40px; 
     display: flex;
     justify-content: center;
@@ -547,6 +603,7 @@ button {
 
 .icon-subscribe {
     margin-left: 16px;
+    fill: #FFFFFF;
 
 }
 
