@@ -145,8 +145,8 @@ button {
     padding-top: 188px;
     padding-bottom: 188px;
     margin: 0 auto;
-     max-width: 1440px;
-     background-repeat: no-repeat;
+    max-width: 1440px;
+    background-repeat: no-repeat;
 }
 
 .hero-container {
@@ -248,6 +248,15 @@ button {
     height: 112px;
     margin-bottom: 8px;
 }
+
+@media screen and (max-width: 1157px) {
+  .contenitore-icon {
+    display: none;
+  }
+
+  
+}
+
 
 .icon {
     margin: 24px 100px;
@@ -769,3 +778,10 @@ button {
     border: none;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
+
+
+
+  .modal,
+   .backdrop {
+  display: none !important;
+}
