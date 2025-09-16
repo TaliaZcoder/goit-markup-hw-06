@@ -819,8 +819,8 @@ button {
     transform: translate(-50%, -50%);
     padding: 72px 16px 24px 16px; 
 
-    width: 256px;
-    min-height: 550px;
+    width: 288px;
+    min-height: 623px;
 
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
     background-color: #fcfcfc;
@@ -922,6 +922,7 @@ button {
 .form-field-text-input {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
+    padding-left: 34px;
     background-color: transparent;
     outline: transparent;
     width: 100%;
@@ -946,7 +947,7 @@ button {
 .form-field-textarea {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 224px;
+    width: 100%;
     height: 104px;
     padding: 8px 16px;
     resize: none;
@@ -1013,7 +1014,21 @@ button {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-
+@media (min-width:768px) {
+    .modal {
+        width: 408px;
+        min-height: 584px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    
+    .highlight {
+        margin-left: 0;
+    }
+    .mobile-menu {
+        display: none;
+    }
+}
 
 
 
@@ -1033,7 +1048,7 @@ button {
     
     transform: translateX(-100%);
     transition: transform 0.3s ease;
-    z-index: 999;          
+    z-index: 999;        
 }
 
   .mobile-menu.is-open {
@@ -1126,21 +1141,6 @@ button {
 }
 
 @media (min-width:768px) {
-    .modal {
-        width: 360px;
-        min-height: 508px;
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-    .form-field-text-input{
-        width: 355px;
-    }
-    .form-field-textarea {
-        width: 328px;
-    }
-    .highlight {
-        margin-left: 0;
-    }
     .mobile-menu {
         display: none;
     }
